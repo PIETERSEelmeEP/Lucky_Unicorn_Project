@@ -30,8 +30,26 @@ def instructions():
     print()
     print("The rules of the game will go here")
     print()
-    print("program continues")
-    print()
+
+
+# number checking function
+def num_checker(question, low, high):
+    error = "That was not a valid input\n" \
+            "Please enter a whole number between {} and {}\n".format(low, high)
+
+    # Keep asking until a valid amount is entered (low:high)
+    while True:
+        try:
+            # Ask for the amount
+            response = int(input(question))
+
+            # Check if the response is in the required range
+            if low <= response <= high:
+                return response
+            else:
+                print(error)
+        except ValueError:
+            print(error)
 
 
 # Main routine go here....
@@ -39,5 +57,7 @@ played_before = yes_no("Have you played this game before? ")
 
 if played_before == "No":
     instructions()
-else:
-    print("Program continues")
+
+# Ask the user how much they want to add to their account to play with
+user_balance = num_checker("How much would you like to add to your account to play with? $", 1, 10)
+print(f"You have ${user_balance} in your account to play with")
