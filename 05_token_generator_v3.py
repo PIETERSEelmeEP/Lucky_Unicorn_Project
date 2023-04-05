@@ -1,4 +1,4 @@
-"""Component 3 (random tokens) v2
+"""Component 3 (random tokens) v3
 Calculate user balance based on random selection of tokens"""
 
 import random
@@ -6,12 +6,12 @@ import random
 tokens = ["Unicorn", "Horse", "Donkey", "Zebra"]
 balance = 100
 
-# Testing loop to generate 20 tokens
-for item in range(20):
+# Testing loop to generate 100 tokens
+for item in range(100):
     token = random.choice(tokens)
     print(token, end='\t')  # Can wrap output making it easier to screenshot
 
-    # ajdust balance
+    # adjust balance
     if token == "Unicorn":
         balance += 4
     elif token == "Donkey":
