@@ -1,7 +1,6 @@
 """Component 3 (random tokens) v4
-Format currency
-Ensure odds favour the house - 10% chance of unicorn and 30% chance for each
-of donkey, horse, or zebra
+Calculate percentages to ensure the odds favour teh house
+5% Unicorn, 30% Donkey, and the remaining 65% Horse/Zebra
 """
 
 import random
