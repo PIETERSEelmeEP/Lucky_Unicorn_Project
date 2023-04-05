@@ -6,8 +6,8 @@ import random
 tokens = ["Unicorn", "Horse", "Donkey", "Zebra"]
 balance = 100
 
-# Testing loop to generate 20 tokens
-for item in range(20):
+# Testing loop to generate 100 tokens
+for item in range(100):
     token = random.choice(tokens)
     print(token, end='\t')  # Can wrap output making it easier to screenshot
 
