@@ -9,7 +9,7 @@ STARTING_BALANCE = 100
 balance = STARTING_BALANCE
 
 # Testing loop to generate 20 tokens
-for item in range(20):
+for item in range(10):
     number = random.randint(1, 100)
 
     # adjust balance
@@ -38,5 +38,8 @@ for item in range(20):
             balance -= 0.5
 
     # output
+    print(f"Token: {token}, Balance: ${balance:.2f}")
+
+print()
 print(f"Starting balance = ${STARTING_BALANCE:.2f}")
 print(f"Final balance = ${balance:.2f}")
