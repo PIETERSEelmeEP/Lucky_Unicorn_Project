@@ -1,15 +1,21 @@
 """Component 3 (random tokens) v3
-Calculate user balance based on random selection of tokens"""
+Format currency
+Ensure odds favour the house - 10% chance of unicorn and 30% chance for each
+of donkey, horse, or zebra
+"""
 
 import random
 
-tokens = ["Unicorn", "Horse", "Donkey", "Zebra"]
-balance = 100
+tokens = ["Unicorn",
+          "Horse", "Horse", "Horse",
+          "Donkey", "Donkey", "Donkey",
+          "Zebra", "Zebra", "Zebra"]
+STARTING_BALANCE = 100
+balance = STARTING_BALANCE
 
-# Testing loop to generate 100 tokens
-for item in range(100):
+# Testing loop to generate 20 tokens
+for item in range(20):
     token = random.choice(tokens)
-    print(token, end='\t')  # Can wrap output making it easier to screenshot
 
     # adjust balance
     if token == "Unicorn":
@@ -20,4 +26,5 @@ for item in range(100):
         balance -= 0.50
 
     # output
-    print(f"Token: {token}, Balance: ${balance}")
+print(f"Starting balance = ${STARTING_BALANCE:.2f}")
+print(f"Final balance = ${balance:.2f}")
