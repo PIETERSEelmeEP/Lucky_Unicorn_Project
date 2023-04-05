@@ -16,3 +16,5 @@ while not valid:
             valid = True
         else:
             print(error)
+    except ValueError:
+        print(error)
