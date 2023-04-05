@@ -11,7 +11,7 @@ for item in range(20):
     token = random.choice(tokens)
     print(token, end='\t')  # Can wrap output making it easier to screenshot
 
-    # ajdust balance
+    # adjust balance
     if token == "Unicorn":
         balance += 4
     elif token == "Donkey":
