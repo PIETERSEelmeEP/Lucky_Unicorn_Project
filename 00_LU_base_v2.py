@@ -71,12 +71,16 @@ def generate_token(balance):
         if 1 <= number <= 5:
             token = "unicorn"
             balance += 4
+            print(formatter("!", "Congratulations, you got an Unicorn"))
+            print()
 
         # if the random number is between 6 and 36
         # user gets a donkey (subtract $1 from balance)
         elif 6 <= number <= 36:
             token = "donkey"
             balance -= 1
+            print(formatter("#", "Sadly, you got a Donkey"))
+            print()
 
         # in all other cases the token must be a horse or a zebra
         # subtract $0.50 from the balance in either case
@@ -85,11 +89,16 @@ def generate_token(balance):
             if number % 2 == 0:
                 token = "zebra"
                 balance -= 0.5
+                print(formatter(":", "Sadly, you got a Zebra"))
+                print()
 
             # Otherwise set the token to horse
             else:
                 token = "horse"
                 balance -= 0.5
+                print(formatter("~", "Sadly, you got a Horse"))
+                print()
+
         # Output
         print(f"Round {rounds_played}. Token: {token}, Balance: ${balance:.2f}")
         print()
@@ -103,7 +112,18 @@ def generate_token(balance):
     return balance
 
 
+# function to format text
+def formatter(_symbol, _text):
+    sides = _symbol * 3
+    formatted_text = f"{sides} {_text} {sides}"
+    top_bottom = _symbol * len(formatted_text)
+    return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
+
+
 # Main routine go here....
+print(formatter("-", "Welcome to the Lucky Unicorn Game"))
+print()
+
 played_before = yes_no("Have you played this game before? ")
 
 if played_before == "No":
@@ -117,4 +137,5 @@ closing_balance = generate_token(starting_balance)
 print("Thanks for playing")
 print(f"You started with ${starting_balance:.2f}")
 print(f"and leave with ${closing_balance:.2f}")
-print("Goodbye")
+print()
+print(formatter("*", "Goodbye"))
