@@ -56,5 +56,5 @@ while play_again != "x":
 
 print("Thanks for playing")
 print(f"You started with ${TEST_AMOUNT:.2f}")
-print(f"and leave with ${balance}")
+print(f"and leave with ${balance:.2f}")
 print("Goodbye")
