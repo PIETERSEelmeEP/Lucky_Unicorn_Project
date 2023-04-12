@@ -36,8 +36,8 @@ def instructions():
     print("Then press <enter> to play. You will get a random token which might"
           " be a horse, donkey, zebra, or a unicorn")
     print()
-    print("It costs $1 to play each round but, depending on your prize, you could "
-          "win some of your money back. These are the payout amounts:\n"
+    print("It costs $1 to play each round but, depending on your prize, "
+          "you could win some of your money back. These are the payout amounts:\n"
           "\tUnicorn: $5 (balance increases by $4)\n"
           "\tHorse: $0.50 (balance decreases by $0.50)\n"
           "\tZebra: $0.50 (balance decrease by $0.50)\n"
