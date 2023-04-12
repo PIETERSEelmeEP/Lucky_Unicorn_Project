@@ -79,8 +79,6 @@ def generate_token(balance):
         elif 6 <= number <= 36:
             token = "donkey"
             balance -= 1
-            print(formatter("#", "Sadly, you got a Donkey"))
-            print()
 
         # in all other cases the token must be a horse or a zebra
         # subtract $0.50 from the balance in either case
@@ -89,15 +87,11 @@ def generate_token(balance):
             if number % 2 == 0:
                 token = "zebra"
                 balance -= 0.5
-                print(formatter(":", "Sadly, you got a Zebra"))
-                print()
 
             # Otherwise set the token to horse
             else:
                 token = "horse"
                 balance -= 0.5
-                print(formatter("~", "Sadly, you got a Horse"))
-                print()
 
         # Output
         print(f"Round {rounds_played}. Token: {token}, Balance: ${balance:.2f}")
