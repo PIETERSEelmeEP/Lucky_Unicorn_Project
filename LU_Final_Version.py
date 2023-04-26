@@ -37,7 +37,8 @@ def instructions():
           " be a horse, donkey, zebra, or a unicorn")
     print()
     print("It costs $1 to play each round but, depending on your prize, "
-          "you could win some of your money back. These are the payout amounts:\n"
+          "you could win some of your money back. These are the payout "
+          "amounts:\n"
           "\tUnicorn: $5 (balance increases by $4)\n"
           "\tHorse: $0.50 (balance decreases by $0.50)\n"
           "\tZebra: $0.50 (balance decrease by $0.50)\n"
@@ -118,8 +119,8 @@ def generate_token(balance):
             print("Sorry you have run out of money")
             play_again = "x"
         else:
-            play_again = input("\nDo you want to play another round?\npress <enter> to play again or "
-                               "'x' to exit ")
+            play_again = input("\nDo you want to play another round?\npress "
+                               "<enter> to play again or 'x' to exit ")
         print()
     return balance
 
@@ -142,7 +143,8 @@ if played_before == "No":
     instructions()
 
 # Ask the user how much they want to add to their account to play with
-starting_balance = num_checker("How much would you like to add to your account to play with? $", 1, 10)
+starting_balance = num_checker("How much would you like to add to your account"
+                               " to play with? $", 1, 10)
 print(f"You have ${starting_balance} in your account to play with")
 
 closing_balance = generate_token(starting_balance)
