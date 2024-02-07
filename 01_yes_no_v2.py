@@ -1,5 +1,6 @@
 """LU Yes / No
-Simplifies the input by converting it to lower case. Also accepts y or n as abbreviations.
+Simplifies the input by converting it to lower case. Also accepts y or n as
+abbreviations.
 Prints result of user choice as well as input - for testing
 """
 
